@@ -53,12 +53,33 @@ namespace Assignment_OOP4
 
         #endregion
 
-        
+        #region Q2
+        //2.Override the ToString Function to produce this output:
+		//  Point3D P = new Point3D(10, 10, 10);
+		//  Console.WriteLine(P.ToString( ));
+		//  Output: “Point Coordinates: (10, 10, 10)”.
+		public override string ToString()
+        {
+            return $"Point Coordinates:{x},{y},{z}";
+        }
 
 
 
-        
 
-                 
+
+
+
+
+        #endregion
+
+
+
+
+
+
+
+
+
+
     }
 }
