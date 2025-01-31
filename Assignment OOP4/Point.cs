@@ -4,6 +4,7 @@ using System.Linq;
 using System.Runtime.Intrinsics.X86;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Assignment_OOP4
 {
@@ -11,6 +12,7 @@ namespace Assignment_OOP4
 
     {
         #region Q1
+
         //1.Define 3D Point Class and the basic Constructors(use chaining in constructors).
 
         #region Attributes
@@ -51,5 +53,12 @@ namespace Assignment_OOP4
 
         #endregion
 
+        
+
+
+
+        
+
+                 
     }
 }
