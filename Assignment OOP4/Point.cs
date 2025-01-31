@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Buffers.Text;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Intrinsics.X86;
@@ -72,7 +73,64 @@ namespace Assignment_OOP4
 
         #endregion
 
+        #region Q3
+         //3. Read from the User the Coordinates for 2 points P1, P2 (Check the input using try Pares, Parse, Convert).
 
+		#region CreatePoint
+		public static Point3D Create3Dpoint()
+    {
+        int x, y, z;
+        bool flag;
+        do
+        {
+            Console.WriteLine("X");
+            flag = int.TryParse(Console.ReadLine(), out x);
+
+        } while (!flag);
+        do
+        {
+            Console.WriteLine("Y");
+            flag = int.TryParse(Console.ReadLine(), out y);
+
+        } while (!flag);
+        do
+        {
+            Console.WriteLine("Z");
+            flag = int.TryParse(Console.ReadLine(), out z);
+
+        } while (!flag);
+        return new Point3D(x, y, z);
+        }
+
+
+        #endregion
+        #endregion
+
+
+        #region Q4
+       //4.Try to use == If(P1 == P2)   Does it work properly? 
+        /* == operator compare ref of objects if i want to 
+          To compare objects for their values so you have to 
+         overload ==  and != operators  
+        Or override Equals() and GetHashcode() methods */
+        public static bool operator ==(Point3D p1, Point3D p2)
+        {
+            return p1.x == p2.x && p1.y == p2.y && p1.z == p2.z;
+        }
+        public static bool operator !=(Point3D p1, Point3D p2)
+        {
+
+            return p1.x != p2.x || p1.y != p2.y || p1.z != p2.z;
+        }
+
+
+        #endregion
+
+
+
+
+
+       
 
 
 
