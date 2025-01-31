@@ -126,11 +126,47 @@ namespace Assignment_OOP4
 
         #endregion
 
-
-
-
-
        
+         #region Q5
+        //5.Sort Array based on X & Y Coordinates
+
+        public static void sortarray(Point3D[] arr)
+        {
+            Array.Sort(arr);
+        }
+
+        public int CompareTo(object? obj)
+        {
+            Point3D point = (Point3D)obj;
+            if (x > point.x)
+                return 1;
+            else if (x < point.x)
+                return -1;
+            else
+            {
+                if (y > point.y)
+                    return 1;
+                else if (y < point.y)
+                    return -1;
+                else
+                {
+                    if (z > point.z)
+                        return 1;
+                    else if (z < point.z)
+                        return -1;
+                    return 0;
+                }
+            }
+
+        }
+        #endregion
+        
+
+
+        
+
+
+
 
 
 
